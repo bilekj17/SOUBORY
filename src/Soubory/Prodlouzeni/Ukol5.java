@@ -42,7 +42,7 @@ public class Ukol5 {
                 }
             }
             vystup.append("=").append(soucet);
-            System.out.println(vystup.toString());
+            System.out.println(vystup);
 
             if (soucet<50){
                 writer.write(vystup.toString());
