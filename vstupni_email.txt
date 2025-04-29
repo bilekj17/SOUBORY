@@ -1,0 +1,12 @@
+jan.novak@example.com
+eva.kralova@skola.cz
+petr.svoboda@firma.org
+lucie.mala@domena.net
+marek.horak@email.cz
+katerina.nova@gmail.com
+pavel.novotny@seznam.cz
+alena.horakova@seznam.cz
+david.krejci@seznam.cz
+jana.nemcova@gmail.com
+filip.novak@gmail.com
+veronika.soukupova@gmail.com
