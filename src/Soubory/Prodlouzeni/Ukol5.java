@@ -22,33 +22,27 @@ public class Ukol5 {
         String line;
         while (reader.ready()) {
             line = reader.readLine();
-            String[] lineSplit = line.split(", ");
-            List<Integer>  cisla = new ArrayList<>();
-            int soucet = 0;
-            for (String s : lineSplit) {
-                s = s.trim();
-                if (!s.isEmpty()) {
-                        int cislo = Integer.parseInt(s);
-                        cisla.add(cislo);
-                        soucet += cislo;
-                }
-            }
+            String[] lineSplit = line.trim().split(",");
 
             StringBuilder vystup = new StringBuilder();
-            for (int i = 0; i < cisla.size(); i++) {
-                vystup.append(cisla.get(i));
-                if (i < cisla.size() - 1) {
+            int soucet = 0;
+            for (int i = 0; i<lineSplit.length; i++){
+                soucet += Integer.parseInt(lineSplit[i]);
+                vystup.append(lineSplit[i]);
+                if (i < lineSplit.length-1){
                     vystup.append("+");
                 }
             }
             vystup.append("=").append(soucet);
             System.out.println(vystup);
 
-            if (soucet<50){
-                writer.write(vystup.toString());
+            if (soucet>50){
+                writer.write(String.valueOf(vystup));
                 writer.newLine();
             }
 
         }
+        reader.close();
+        writer.close();
     }
 }
