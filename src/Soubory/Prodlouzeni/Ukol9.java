@@ -22,7 +22,7 @@ public class Ukol9 {
             line = reader.readLine();
             int soucet = 0;
             for (int i = 0; i < line.length(); i++) {
-                int cifra = Integer.parseInt(line.substring(i, i + 1));
+                int cifra = Integer.parseInt(String.valueOf(line.charAt(i)));
                 double mocnina = cifra*Math.pow(2, (line.length()-i));
                 soucet += mocnina;
 

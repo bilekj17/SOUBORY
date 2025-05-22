@@ -19,60 +19,42 @@ public class Test3 {
 
         String line;
         while ((line = reader.readLine()) != null) {
-            String[] split = line.trim().split("=");
-            String vyraz = split[0].trim();
-            int ocekavany = Integer.parseInt(split[1].trim());
+            String[] split = line.trim().split(" ");
+            int cislo1 = Integer.parseInt(split[0]);
+            int cislo2 = Integer.parseInt(split[2]);
+            int vysledek = Integer.parseInt(split[4]);
 
-            if (vyraz.contains("+")) {
-                String[] cisla = vyraz.split("\\+");
-                int a = Integer.parseInt(cisla[0].trim());
-                int b = Integer.parseInt(cisla[1].trim());
-                int vysledek = a + b;
-
-                if (vysledek != ocekavany) {
-                    System.out.println("chyba: " + vyraz + " = " + ocekavany + " (správně: " + vysledek + ")");
-                } else {
-                    writer.write(line + "\n");
+            if (split[1].equals("+")){
+                int sVysledek = cislo1+cislo2;
+                if (sVysledek != vysledek){
+                    System.out.println("Výsledek je špatně: "+vysledek+" správný je: "+sVysledek);
+                } else{
+                    writer.write(line+ "\n");
                 }
-            } else if (vyraz.contains("-")) {
-                String[] cisla = vyraz.split("-");
-                int a = Integer.parseInt(cisla[0].trim());
-                int b = Integer.parseInt(cisla[1].trim());
-                int vysledek = a - b;
-
-                if (vysledek != ocekavany) {
-                    System.out.println("chyba: " + vyraz + " = " + ocekavany + " (správně: " + vysledek + ")");
-                } else {
-                    writer.write(line + "\n");
+            }
+            if (split[1].equals("-")){
+                int sVysledek = cislo1-cislo2;
+                if (sVysledek != vysledek){
+                    System.out.println("Výsledek je špatně: "+vysledek+" správný je: "+sVysledek);
+                } else{
+                    writer.write(line+ "\n");
                 }
-            } else if (vyraz.contains("*")) {
-                String[] cisla = vyraz.split("\\*");
-                int a = Integer.parseInt(cisla[0].trim());
-                int b = Integer.parseInt(cisla[1].trim());
-                int vysledek = a * b;
-
-                if (vysledek != ocekavany) {
-                    System.out.println("chyba: " + vyraz + " = " + ocekavany + " (správně: " + vysledek + ")");
-                } else {
-                    writer.write(line + "\n");
+            }
+            if (split[1].equals("*")){
+                int sVysledek = cislo1*cislo2;
+                if (sVysledek != vysledek){
+                    System.out.println("Výsledek je špatně: "+vysledek+" správný je: "+sVysledek);
+                } else{
+                    writer.write(line+ "\n");
                 }
-            } else if (vyraz.contains("/")) {
-                String[] cisla = vyraz.split("/");
-                int a = Integer.parseInt(cisla[0].trim());
-                int b = Integer.parseInt(cisla[1].trim());
-                if (b == 0) {
-                    System.out.println("chyba: dělení nulou ve výrazu: " + line);
-                    continue;
+            }
+            if (split[1].equals("/")){
+                int sVysledek = cislo1/cislo2;
+                if (sVysledek != vysledek){
+                    System.out.println("Výsledek je špatně: "+vysledek+" správný je: "+sVysledek);
+                } else{
+                    writer.write(line+ "\n");
                 }
-                int vysledek = a / b;
-
-                if (vysledek != ocekavany) {
-                    System.out.println("chyba: " + vyraz + " = " + ocekavany + " (správně: " + vysledek + ")");
-                } else {
-                    writer.write(line + "\n");
-                }
-            } else {
-                System.out.println("neznámý operátor v řádku: " + line);
             }
         }
 
