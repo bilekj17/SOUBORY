@@ -1,0 +1,3 @@
+kvadr, a=3, b=4, c=5
+valec, r=3, v=5
+koule, r=4
