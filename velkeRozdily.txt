@@ -1,0 +1,4 @@
+Řádek1: min = 1 max = 10
+Řádek2: min = 3 max = 20
+Řádek3: min = -10 max = 100
+Řádek4: min = 0 max = 100

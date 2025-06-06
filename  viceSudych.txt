@@ -1,0 +1,4 @@
+Řádek1: 4 Sudá čísla, 4 Lichá čísla 
+Řádek2: 3 Sudá čísla, 3 Lichá čísla 
+Řádek3: 3 Sudá čísla, 3 Lichá čísla 
+Řádek4: 10 Sudá čísla, 4 Lichá čísla 
